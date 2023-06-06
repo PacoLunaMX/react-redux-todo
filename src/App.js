@@ -1,17 +1,17 @@
 import './App.css';
-import { useDispatch, useSelector } from 'react-redux';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
+import { Route, Routes} from 'react-router-dom'
 
 function App() {
-  const taskState = useSelector( state => state.tasks)
 
 
   return (
-    <div className="App">
-      <TaskForm></TaskForm>
-      <TaskList></TaskList>
-    </div>
+        <Routes>        
+          <Route path='/' element={<TaskList />}/>
+          <Route path='/create-task' element={<TaskForm/>}/>
+          <Route path='/edit-task/:id' element={<TaskForm/>}/>
+        </Routes>
   );
 }
 
