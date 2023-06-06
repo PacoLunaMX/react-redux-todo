@@ -7,11 +7,11 @@ function App() {
 
 
   return (
-        <Routes>        
-          <Route path='/' element={<TaskList />}/>
-          <Route path='/create-task' element={<TaskForm/>}/>
-          <Route path='/edit-task/:id' element={<TaskForm/>}/>
-        </Routes>
+    <Routes>
+      <Route path='/' element={<TaskList/>} />
+      <Route path='/create-task' element={<TaskList/>} />
+      <Route path='/edit-task/:id' element={<TaskForm/>} />
+    </Routes>
   );
 }
 
